@@ -4,7 +4,7 @@ from sqlalchemy import func
 
 from models import Employee
 
-
+#this  function  is to retreive employees
 def find_employee(db: Session, name_text: str):
     """Find an employee by first name or full name."""
     name_text = name_text.strip()
