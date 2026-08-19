@@ -1,3 +1,6 @@
+#this are the dependancies
+#Add correctversionhere Ajay
+
 fastapi
 uvicorn[standard]
 sqlalchemy
