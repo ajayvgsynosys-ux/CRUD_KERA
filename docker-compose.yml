@@ -1,0 +1,22 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+    container_name: employee-chatbot-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - employee_data:/app
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: employee-chatbot-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  employee_data:
